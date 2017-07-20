@@ -137,7 +137,8 @@ _mesa_lookup_parameter_index(const struct gl_program_parameter_list *paramList,
       return -1;
 
    /* name must be null-terminated */
-   for (GLint i = 0; i < (GLint) paramList->NumParameters; i++) {
+   GLint i;
+   for (i = 0; i < (GLint) paramList->NumParameters; i++) {
       if (paramList->Parameters[i].Name &&
          strcmp(paramList->Parameters[i].Name, name) == 0)
          return i;
